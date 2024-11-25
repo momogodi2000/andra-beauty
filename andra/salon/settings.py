@@ -26,13 +26,8 @@ SECRET_KEY = 'django-insecure-@7j^!9**zckakcb)@!un(bnbv22t)n%r%rwwfh%prcjbonb7g&
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = []
-
-RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
-if RENDER_EXTERNAL_HOSTNAME:
-    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+ALLOWED_HOSTS = ["andra-beauty.onrender.com"]
 
 
 # Application definition
