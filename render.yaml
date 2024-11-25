@@ -1,7 +1,7 @@
 databases:
   - name: andra  # Ensure this matches the name referenced in the envVars section
     plan: free
-    databaseName: db.sqlite3  # Optional: specify the actual database name used
+    databaseName: db  # Use a valid SQL identifier (no special characters or extensions)
     user: yvangodimomo
 
 services:
@@ -14,7 +14,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: db.sqlite3  # Matches the "name" field in the databases section
+          name: andra  # Matches the "name" field in the databases section
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
